@@ -1,0 +1,7 @@
+{
+_name Simple_Bullet
+_class SimpleBullet
+_params 3
+_command move
+_model 0
+}
