@@ -57,8 +57,8 @@ public class shipMovement : MonoBehaviour
         
   
         // transform.Translate(transform.TransformDirection(movDir.normalized) * speed); //
-        while (transform.eulerAngles
-            transform.Rotate(rotDir * angle);
+        //while (transform.eulerAngles
+            //transform.Rotate(rotDir * angle);
     }
 
   
