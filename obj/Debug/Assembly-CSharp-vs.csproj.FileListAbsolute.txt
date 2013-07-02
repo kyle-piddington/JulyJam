@@ -1,0 +1,10 @@
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\obj\Debug\Assembly-CSharp.dll
+C:\Users\Alex Ling\Documents\GitHub\JulyJam\obj\Debug\Assembly-CSharp.pdb
