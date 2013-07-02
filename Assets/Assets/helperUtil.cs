@@ -11,11 +11,16 @@ public static class helperUtil
             return variable += increment;
     }
 
-    public static void upperLimit(int lower, int upper, int increment, int variable)
+    public static int upperLimit(int lower, int upper, int increment, int variable)
     {
         if (variable >= upper)
-            variable = upper;
+            return upper;
         else
-            variable = lower;
+            return lower;
+    }
+
+    public static int rangeCon(float angle) 
+    {
+        return 1;
     }
 }
