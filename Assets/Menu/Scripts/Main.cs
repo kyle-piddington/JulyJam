@@ -57,28 +57,40 @@ public class Main : MonoBehaviour
                 quit.renderer.material.color = Color.red;
                 break;
             case 4:
-            	ch1.renderer.material.color = Color.red;
-                ch2.renderer.material.color = Color.white;
-                ch3.renderer.material.color = Color.white;
-                back.renderer.material.color = Color.white;
+            	if(Camera.main.transform.position.x > 349)
+            	{
+		            	ch1.renderer.material.color = Color.red;
+		                ch2.renderer.material.color = Color.white;
+		                ch3.renderer.material.color = Color.white;
+		                back.renderer.material.color = Color.white;
+            	}
                 break;
             case 5:
-            	ch1.renderer.material.color = Color.white;
-                ch2.renderer.material.color = Color.red;
-                ch3.renderer.material.color = Color.white;
-                back.renderer.material.color = Color.white;
+            	if(Camera.main.transform.position.x > 349)
+            	{
+	            	ch1.renderer.material.color = Color.white;
+	                ch2.renderer.material.color = Color.red;
+	                ch3.renderer.material.color = Color.white;
+	                back.renderer.material.color = Color.white;
+            	}
                 break;
             case 6:
-            	ch1.renderer.material.color = Color.white;
-                ch2.renderer.material.color = Color.white;
-                ch3.renderer.material.color = Color.red;
-                back.renderer.material.color = Color.white;
+            	if(Camera.main.transform.position.x > 349)
+            	{
+	            	ch1.renderer.material.color = Color.white;
+	                ch2.renderer.material.color = Color.white;
+	                ch3.renderer.material.color = Color.red;
+	                back.renderer.material.color = Color.white;
+            	}
                 break;
             case 7:
-            	ch1.renderer.material.color = Color.white;
-                ch2.renderer.material.color = Color.white;
-                ch3.renderer.material.color = Color.white;
-                back.renderer.material.color = Color.red;
+           		if(Camera.main.transform.position.x > 349)
+            	{
+	            	ch1.renderer.material.color = Color.white;
+	                ch2.renderer.material.color = Color.white;
+	                ch3.renderer.material.color = Color.white;
+	                back.renderer.material.color = Color.red;
+            	}
                 break;
         }
 
@@ -132,11 +144,24 @@ public class Main : MonoBehaviour
 
 		if(Camera.main.transform.position.x > 340)
 		{
+			backTextColor = ch1.renderer.material.color;
 			backTextColor.a = (Camera.main.transform.position.x - 340)/10;
 			ch1.renderer.material.color = backTextColor;
+
+			backTextColor = ch2.renderer.material.color;
+			backTextColor.a = (Camera.main.transform.position.x - 340)/10;
 			ch2.renderer.material.color = backTextColor;
+
+			backTextColor = ch3.renderer.material.color;
+			backTextColor.a = (Camera.main.transform.position.x - 340)/10;
 			ch3.renderer.material.color = backTextColor;
+
+			backTextColor = back.renderer.material.color;
+			backTextColor.a = (Camera.main.transform.position.x - 340)/10;
 			back.renderer.material.color = backTextColor;
+
+			backTextColor = lvlslct.renderer.material.color;
+			backTextColor.a = (Camera.main.transform.position.x - 340)/10;
 			lvlslct.renderer.material.color = backTextColor;
 		}
 	}
