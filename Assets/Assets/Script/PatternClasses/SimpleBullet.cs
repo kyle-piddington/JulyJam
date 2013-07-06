@@ -14,13 +14,25 @@ public class SimpleBullet : BulletPattern {
             speed = addlParams[0];
         }
     }
-	void Start () {
-	    
-	}
+    public SimpleBullet(BulletPattern copy)
+        : base(copy)
+    {
+        if (addlParams.Count > 0)
+        {
+            Debug.Log(addlParams[0]);
+            speed = addlParams[0];
+        }
+        else
+        {
+            speed = 0.1f;
+        }
+    }
+	
 	
 	// Update is called once per frame
 	public override void Update () {
         base.Update();
+       
 	}
     protected override void move()
     {

@@ -1,7 +1,10 @@
 {
-_name Simple_Bullet
+_name Simple_Bullet 
 _class SimpleBullet
-_params 3
-_command move
+_params 0.3
+
+_command rotate 2
+
 _model 0
+_startActive
 }

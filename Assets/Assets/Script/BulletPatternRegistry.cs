@@ -5,14 +5,14 @@ using System.Collections.Generic;
 using System.IO;
 public class BulletPatternRegistry
 {
-    private static Hashtable bulletPatternsRegistry = new Hashtable();
+    private static Dictionary<string,BulletPattern> bulletPatternsRegistry = new Dictionary<string,BulletPattern>();
     private static int currentPatternIndex = 0;
     public static List<GameObject> models = new List<GameObject>();
     public static void loadGameModels(List<GameObject> bulletMods)
     {
         foreach (GameObject gO in bulletMods)
         {
-            Debug.Log(gO.ToString());
+            //Debug.Log(gO.ToString());
             models.Add(gO);
         }
     }
@@ -27,7 +27,7 @@ public class BulletPatternRegistry
        
             while(currentPatternIndex < patterns.Length)
             {
-                Debug.Log(patterns[currentPatternIndex]);
+                //Debug.Log(patterns[currentPatternIndex]);
                 if (patterns[currentPatternIndex] != "")
                 {
                     constructPattern(patterns[currentPatternIndex], patterns, currentPatternIndex);
@@ -44,7 +44,12 @@ public class BulletPatternRegistry
             Debug.Log(e.Message);
             return 1;
         }
+        foreach (object Key in bulletPatternsRegistry.Keys)
+        {
+            Debug.Log(Key.ToString());
+        }
         return 0;
+
 
             
     }
@@ -54,25 +59,26 @@ public class BulletPatternRegistry
        string[] passedParams = patternData.Split('\n');
        string key = null;
        string className = null;
-       GameObject model = null;
+       int model =-1;
        List<float> addlParams = new List<float>();
        List<BulletCommand> commands = new List<BulletCommand>();
        List<BulletPattern> subPatterns = new List<BulletPattern>();
        bool startActive = false;
        bool isBullet = false;
        BulletPattern patt;
+     
        foreach (string param in passedParams)
        {
-           
-           string[] paramSeperated = param.Split(' ');
-           //Debug.Log(param);
-           Debug.Log(paramSeperated[0]);
-           switch (paramSeperated[0])
+          
+           string[] paramSeperated = param.Trim().Split(' ');
+           //Debug.Log(param)
+       
+           switch (paramSeperated[0].Trim())
            {
                case "_name":
                    {
                        key = paramSeperated[1];
-                     
+                       Debug.Log("Adding key " + key);
                        break;
                    }
                case "_class":
@@ -121,7 +127,7 @@ public class BulletPatternRegistry
                     }
                case "_model":
                     {
-                        model = models[int.Parse(paramSeperated[1])];
+                        model = int.Parse(paramSeperated[1]);
                         break;
                     }
                case "_sub":
@@ -172,11 +178,12 @@ public class BulletPatternRegistry
            patt.addSubPattern(p);
        }
        patt.setBullet(isBullet);
-       if (model != null)
+       if (model != -1)
        {
            patt.setModel(model);
        }
        bulletPatternsRegistry.Add(key, patt);
+      
        return patt;
     
 
@@ -187,20 +194,26 @@ public class BulletPatternRegistry
         {
             case "SimpleBullet":
                 {
-                    return new SimpleBullet(commands, addlParms);
+                    return new BulletPattern(commands, addlParms);
                 }
-
+    
             default:
                 {
-                    return new SimpleBullet(commands, addlParms);
+                    return new BulletPattern(commands, addlParms);
                 }
         }
     }
-    public static BulletPattern getPattern(string key)
+    public static BulletPattern getPattern(string key) 
     {
-        if (bulletPatternsRegistry.Contains(key))
+        foreach (string Key in bulletPatternsRegistry.Keys)
         {
-            return (BulletPattern)bulletPatternsRegistry[key];
+            Debug.Log(Key + "#" + key);
+            Debug.Log(Key.Length + " " + key.Length);
+        }
+        if (bulletPatternsRegistry.ContainsKey(key))
+        {
+            BulletPattern patt = bulletPatternsRegistry[key];
+            return patt;
         }
         else
         {

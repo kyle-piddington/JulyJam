@@ -35,46 +35,49 @@ public class BulletCommand
             throw new IndexOutOfRangeException();
         }
     }
-
+    public int getArgCount()
+    {
+        return args.Count;
+    }
     private CommandType selectType(string type)
     {
-        switch (type)
-        {
-            case "fire":
+        type = type.Trim();
+        Debug.Log(type + ":"+type.Length);
+            if(type.Equals("fire"))
                 {
                     return CommandType.cmd_fire;
                     
                 }
-            case "delay":
+            else if(type.Equals( "delay"))
                 {
+
                     return CommandType.cmd_delay;
                     
                 }
-            case "move":
+            if(type.Equals("move"))
                 {
+                
                     return CommandType.cmd_move;
                     
                 }
 
-            case "rotate":
+            if(type.Equals("rotate"))
                 {
                     return CommandType.cmd_rotate;
                     
                 }
-            case "stop":
+            if(type.Equals( "stop"))
                 {
                     return CommandType.cmd_stop;
                     
                 }
-            case "start":
+            if(type.Equals( "start"))
                 {
                     return CommandType.cmd_start;
                     
-                }
-            default:
-                {
-                    return CommandType.cmd_start;
-                }
+                }                {
+            return CommandType.cmd_start;
+                
         }
     
 
