@@ -11,7 +11,7 @@ public class shipMovement : MonoBehaviour
     private KeyCode space = KeyCode.Space;
     private Vector3 movDir = new Vector3(0,0,0);
     private Vector3 rotDir = new Vector3(0,0,0);
-    private float speed = 0.4f;
+    private float speed = 0.1f;
 
 
     
