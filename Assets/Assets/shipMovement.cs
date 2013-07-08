@@ -10,8 +10,8 @@ public class shipMovement : MonoBehaviour
     private KeyCode lft = KeyCode.A;
     private KeyCode space = KeyCode.Space;
     private Vector3 movDir = new Vector3(0,0,0);
-    private Vector3 rotDir = new Vector3(0,0,0);
-    private float speed = 0.1f;
+    
+    private float speed = 1f;
 
 
     

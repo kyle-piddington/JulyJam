@@ -10,7 +10,7 @@ public class shipRotation : MonoBehaviour
     private KeyCode lft = KeyCode.A;
     private KeyCode shift = KeyCode.LeftShift;
     private float angleAdjustSpeed = 1;
-    private float rollSpeed = 25;
+    private float rollSpeed = 45;
     private float currAngle = 0;
     private float rollAngle = 0;
     private int rollDir = 1;
