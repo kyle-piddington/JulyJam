@@ -6,20 +6,20 @@ public class shipRotation : MonoBehaviour
 {
 
     private Vector3 rotDir = new Vector3(0, 0, 0);
-    private KeyCode rgt = KeyCode.D;
-    private KeyCode lft = KeyCode.A;
-    private KeyCode shift = KeyCode.LeftShift;
-    private float angleAdjustSpeed = 1;
+    private KeyCode rgt = KeyCode.RightArrow;
+    private KeyCode lft = KeyCode.LeftArrow;
+    private KeyCode Ckey = KeyCode.C;
+    private float angleAdjustSpeed = 5;
     private float rollSpeed = 25;
     private float currAngle = 0;
     private float rollAngle = 0;
     private int rollDir = 1;
-
+    private bool dodging;
     private readonly float maxAngle = 35; //Readonly is the same as final
 
     void Start()
     {
-
+        playerManager.assignPlayer(this.gameObject);
     }
 
 
@@ -38,13 +38,14 @@ public class shipRotation : MonoBehaviour
         {
             transform.Rotate(new Vector3(0, 0, rollSpeed * rollDir));
             rollAngle -= rollSpeed;
-            Debug.Log(rollAngle);
+            
         }
         else if (rollAngle > 0)
         {
 
             transform.Rotate(new Vector3(0, 0, (rollAngle) * rollDir));
             rollAngle = 0;
+            dodging = false;
 
         }
         if (Input.GetKey(rgt))
@@ -52,7 +53,7 @@ public class shipRotation : MonoBehaviour
             if (currAngle - angleAdjustSpeed > -maxAngle)
             {
                 currAngle -= angleAdjustSpeed * 1;
-                transform.Rotate(new Vector3(0, 0, -angleAdjustSpeed));
+                transform.Rotate(new Vector3(0, 0, -angleAdjustSpeed),Space.World);
             }
             if (rollAngle == 0)
             {
@@ -64,7 +65,7 @@ public class shipRotation : MonoBehaviour
             if (currAngle + angleAdjustSpeed < maxAngle)
             {
                 currAngle += angleAdjustSpeed * 1;
-                transform.Rotate(new Vector3(0, 0, +angleAdjustSpeed));
+                transform.Rotate(new Vector3(0, 0, +angleAdjustSpeed),Space.World);
             }
             if (rollAngle == 0)
             {
@@ -75,7 +76,7 @@ public class shipRotation : MonoBehaviour
         {
             if (currAngle + angleAdjustSpeed < 0)
             {
-                transform.Rotate(new Vector3(0, 0, angleAdjustSpeed));
+                transform.Rotate(new Vector3(0, 0, angleAdjustSpeed),Space.World);
                 currAngle += angleAdjustSpeed;
                 if (rollAngle == 0)
                 {
@@ -85,7 +86,7 @@ public class shipRotation : MonoBehaviour
             }
             else if (currAngle - angleAdjustSpeed > 0)
             {
-                transform.Rotate(new Vector3(0, 0, -angleAdjustSpeed));
+                transform.Rotate(new Vector3(0, 0, -angleAdjustSpeed),Space.World);
                 currAngle -= angleAdjustSpeed;
                 if (rollAngle == 0)
                 {
@@ -95,7 +96,7 @@ public class shipRotation : MonoBehaviour
             }
             else
             {
-                transform.Rotate(new Vector3(0, 0, 0 - currAngle));
+                transform.Rotate(new Vector3(0, 0, 0 - currAngle),Space.World);
                 currAngle = 0;
                 if (rollAngle == 0)
                 {
@@ -103,19 +104,26 @@ public class shipRotation : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKey(shift) && rollAngle == 0)
+        if (Input.GetKey(Ckey) && rollAngle == 0)
         {
-            rollAngle = +(360);
-
+            rollAngle = (360);
+            dodging = true;
         }
+    }
 
         //Debug.Log(currAngle);
-
+    public bool isDodging()
+    {
+        return dodging;
+    }
+    public void isHit()
+    {
+        Time.timeScale = 0;
+    }
        
 
-        //print(rotDir.z);
-        //transform.Rotate(rotDir.normalized);
+      
 
-    }
+    
 }
 
