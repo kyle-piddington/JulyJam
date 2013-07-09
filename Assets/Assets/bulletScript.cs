@@ -36,6 +36,7 @@ public class bulletScript : MonoBehaviour {
     public void setAngle(float angle)
     {
         this.angle = angle;
+        
         transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
     }
     void OnBecameInvisible()

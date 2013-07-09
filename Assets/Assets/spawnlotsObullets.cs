@@ -12,6 +12,7 @@ public class spawnlotsObullets : MonoBehaviour {
     public float resetTime;
     public bool refires;
     public bool deletes;
+    public float arcAngle;
     float resetTimer;
     float totalTimer;
     float timer;
@@ -34,7 +35,7 @@ public class spawnlotsObullets : MonoBehaviour {
                 {
                     bulletScript newBullet = Instantiate(bulletCopy, transform.position, Quaternion.identity) as bulletScript;
 
-                    newBullet.setAngle(360 / streamAmnt * i + currRotation);
+                    newBullet.setAngle(arcAngle / streamAmnt * i + currRotation);
                 }
                 currRotation += rotChangeAmount;
             }
