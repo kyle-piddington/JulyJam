@@ -39,6 +39,8 @@ public class shipMovement : MonoBehaviour
         }
         if (Input.GetKey(lft)) {
             movDir.x -= 1;
+            rotDir.z += 1;
+            time = 0;
         }
    
         
