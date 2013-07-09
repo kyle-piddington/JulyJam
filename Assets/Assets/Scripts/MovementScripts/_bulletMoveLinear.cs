@@ -18,6 +18,7 @@ public class _bulletMoveLinear : MonoBehaviour {
         if (ScreenBounds.Contains(new Vector2(transform.position.x, transform.position.z))) 
         {
             Destroy(gameObject);
+            
         }
     }
 }
