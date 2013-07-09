@@ -1,49 +1,60 @@
-
+﻿using System;
 using UnityEngine;
-using System.Collections;
 
-public class shipRotation : MonoBehaviour
+
+public class shipMovement : MonoBehaviour
 {
-
-    private Vector3 rotDir = new Vector3(0, 0, 0);
+    private KeyCode frwd = KeyCode.W;
+    private KeyCode bkwd = KeyCode.S;
     private KeyCode rgt = KeyCode.D;
     private KeyCode lft = KeyCode.A;
     private KeyCode shift = KeyCode.LeftShift;
+    private Vector3 movDir = new Vector3(0,0,0);
+
+   
     private float angleAdjustSpeed = 1;
     private float rollSpeed = 25;
     private float currAngle = 0;
     private float rollAngle = 0;
     private int rollDir = 1;
+    private float speed = 40f;
 
-    private readonly float maxAngle = 35; //Readonly is the same as final
-
-    void Start()
-    {
-
-    }
-
-
+    private readonly float maxAngle = 35;
+    void Start() { }
+    
+        
     void Update()
     {
-
-        float rotZ = transform.eulerAngles.z;
-
-        if (rotZ > 180)
-        {
-            rotZ -= 360;
+       
+        
+        
+        movDir.Set(0, 0, 0);
+    
+        if (Input.GetKey(frwd)) {
+            movDir.z += 1;
+            
         }
-
-        //rotDir.Set(0, 0, -rotZ);
+        if (Input.GetKey(bkwd)) {
+            movDir.z -= 1;
+            
+        }
+        if (Input.GetKey(rgt)) {
+            movDir.x += 1;
+        
+        }
+        if (Input.GetKey(lft)) {
+            movDir.x -= 1;
+        }
         if (rollAngle - rollSpeed >= 0)
         {
-            transform.Rotate(new Vector3(0, 0, rollSpeed * rollDir));
+            transform.Rotate(new Vector3(0, 0, rollSpeed * rollDir),Space.Self);
             rollAngle -= rollSpeed;
-            Debug.Log(rollAngle);
+            //Debug.Log(rollAngle);
         }
         else if (rollAngle > 0)
         {
 
-            transform.Rotate(new Vector3(0, 0, (rollAngle) * rollDir));
+            transform.Rotate(new Vector3(0, 0, (rollAngle) * rollDir),Space.Self);
             rollAngle = 0;
 
         }
@@ -52,7 +63,7 @@ public class shipRotation : MonoBehaviour
             if (currAngle - angleAdjustSpeed > -maxAngle)
             {
                 currAngle -= angleAdjustSpeed * 1;
-                transform.Rotate(new Vector3(0, 0, -angleAdjustSpeed));
+                transform.Rotate(new Vector3(0, 0, -angleAdjustSpeed),Space.Self);
             }
             if (rollAngle == 0)
             {
@@ -64,7 +75,7 @@ public class shipRotation : MonoBehaviour
             if (currAngle + angleAdjustSpeed < maxAngle)
             {
                 currAngle += angleAdjustSpeed * 1;
-                transform.Rotate(new Vector3(0, 0, +angleAdjustSpeed));
+                transform.Rotate(new Vector3(0, 0, +angleAdjustSpeed),Space.Self);
             }
             if (rollAngle == 0)
             {
@@ -75,7 +86,7 @@ public class shipRotation : MonoBehaviour
         {
             if (currAngle + angleAdjustSpeed < 0)
             {
-                transform.Rotate(new Vector3(0, 0, angleAdjustSpeed));
+                transform.Rotate(new Vector3(0, 0, angleAdjustSpeed),Space.Self);
                 currAngle += angleAdjustSpeed;
                 if (rollAngle == 0)
                 {
@@ -85,7 +96,7 @@ public class shipRotation : MonoBehaviour
             }
             else if (currAngle - angleAdjustSpeed > 0)
             {
-                transform.Rotate(new Vector3(0, 0, -angleAdjustSpeed));
+                transform.Rotate(new Vector3(0, 0, -angleAdjustSpeed),Space.Self);
                 currAngle -= angleAdjustSpeed;
                 if (rollAngle == 0)
                 {
@@ -95,7 +106,7 @@ public class shipRotation : MonoBehaviour
             }
             else
             {
-                transform.Rotate(new Vector3(0, 0, 0 - currAngle));
+                transform.Rotate(new Vector3(0, 0, 0 - currAngle),Space.Self);
                 currAngle = 0;
                 if (rollAngle == 0)
                 {
@@ -108,14 +119,17 @@ public class shipRotation : MonoBehaviour
             rollAngle = +(360);
 
         }
-
-        //Debug.Log(currAngle);
-
-       
-
-        //print(rotDir.z);
-        //transform.Rotate(rotDir.normalized);
-
+        transform.Translate((movDir.normalized) * speed*Time.deltaTime,Space.World);
+   
     }
+
+    
+
+  
+
+  
+
+
+
 }
 
