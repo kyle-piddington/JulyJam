@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af4b40f08735acf44ab30631dd8b412e
+guid: 8ca27f3e97061f24cb6b0d699d1adc07
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -8,67 +8,71 @@ ModelImporter:
     100004: Body
     100006: Body2
     100008: Cockpit
-    100010: //RootNode
-    100012: Render
-    100014: Sides
-    100016: Vent_Flap
-    100018: Vent_Flap__11_
-    100020: Vent_Flap__12_
-    100022: Vent_Flap__13_
-    100024: Vent_Flap__14_
-    100026: Vent_Flap__15_
-    100028: Vent_Flap__16_
-    100030: Vent_Flap__17_
-    100032: Vent_Flap__18_
-    100034: Vent_Flap__19_
-    100036: Vent_Flap__20_
-    100038: Vent_Flap__21_
-    100040: Vent_Flap__22_
-    100042: Vent_Flap__23_
-    100044: Vent_Flap__24_
-    100046: Vent_Flap__2_
-    100048: Vent_Flap__3_
-    100050: Vent_Flap__47_
-    100052: Vent_Flap__4_
-    100054: Vent_Flap__5_
-    100056: Vent_Flap__6_
-    100058: Vent_Flap__7_
-    100060: Vent_Flap__8_
-    100062: Vent_Flap__9_
-    100064: Wing
+    100010: Color_grid__Image___Texture_
+    100012: //RootNode
+    100014: Render
+    100016: Sides
+    100018: Texture_Group
+    100020: Vent_Flap
+    100022: Vent_Flap__11_
+    100024: Vent_Flap__12_
+    100026: Vent_Flap__13_
+    100028: Vent_Flap__14_
+    100030: Vent_Flap__15_
+    100032: Vent_Flap__16_
+    100034: Vent_Flap__17_
+    100036: Vent_Flap__18_
+    100038: Vent_Flap__19_
+    100040: Vent_Flap__20_
+    100042: Vent_Flap__21_
+    100044: Vent_Flap__22_
+    100046: Vent_Flap__23_
+    100048: Vent_Flap__24_
+    100050: Vent_Flap__2_
+    100052: Vent_Flap__3_
+    100054: Vent_Flap__47_
+    100056: Vent_Flap__4_
+    100058: Vent_Flap__5_
+    100060: Vent_Flap__6_
+    100062: Vent_Flap__7_
+    100064: Vent_Flap__8_
+    100066: Vent_Flap__9_
+    100068: Wing
     400000: Back_Flaps
     400002: Back_Thruster
     400004: Body
     400006: Body2
     400008: Cockpit
-    400010: //RootNode
-    400012: Render
-    400014: Sides
-    400016: Vent_Flap
-    400018: Vent_Flap__11_
-    400020: Vent_Flap__12_
-    400022: Vent_Flap__13_
-    400024: Vent_Flap__14_
-    400026: Vent_Flap__15_
-    400028: Vent_Flap__16_
-    400030: Vent_Flap__17_
-    400032: Vent_Flap__18_
-    400034: Vent_Flap__19_
-    400036: Vent_Flap__20_
-    400038: Vent_Flap__21_
-    400040: Vent_Flap__22_
-    400042: Vent_Flap__23_
-    400044: Vent_Flap__24_
-    400046: Vent_Flap__2_
-    400048: Vent_Flap__3_
-    400050: Vent_Flap__47_
-    400052: Vent_Flap__4_
-    400054: Vent_Flap__5_
-    400056: Vent_Flap__6_
-    400058: Vent_Flap__7_
-    400060: Vent_Flap__8_
-    400062: Vent_Flap__9_
-    400064: Wing
+    400010: Color_grid__Image___Texture_
+    400012: //RootNode
+    400014: Render
+    400016: Sides
+    400018: Texture_Group
+    400020: Vent_Flap
+    400022: Vent_Flap__11_
+    400024: Vent_Flap__12_
+    400026: Vent_Flap__13_
+    400028: Vent_Flap__14_
+    400030: Vent_Flap__15_
+    400032: Vent_Flap__16_
+    400034: Vent_Flap__17_
+    400036: Vent_Flap__18_
+    400038: Vent_Flap__19_
+    400040: Vent_Flap__20_
+    400042: Vent_Flap__21_
+    400044: Vent_Flap__22_
+    400046: Vent_Flap__23_
+    400048: Vent_Flap__24_
+    400050: Vent_Flap__2_
+    400052: Vent_Flap__3_
+    400054: Vent_Flap__47_
+    400056: Vent_Flap__4_
+    400058: Vent_Flap__5_
+    400060: Vent_Flap__6_
+    400062: Vent_Flap__7_
+    400064: Vent_Flap__8_
+    400066: Vent_Flap__9_
+    400068: Wing
     2300000: Back_Flaps
     2300002: Back_Thruster
     2300004: Body

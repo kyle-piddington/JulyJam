@@ -1,5 +1,4 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 310c4a69836029e498c572b08b6e80b5
 ModelImporter:
   serializedVersion: 15
@@ -131,12 +130,6 @@ ModelImporter:
     4300008: Cockpit
     4300010: Back_Flaps
     9500000: //RootNode
-=======
-guid: 888f2b1755893a74b850e7732e67bd81
-ModelImporter:
-  serializedVersion: 15
-  fileIDToRecycleName: {}
->>>>>>> 715cea1c4d1812002eb4c5e03716dc654f048fe5
   materials:
     importMaterials: 1
     materialName: 0
