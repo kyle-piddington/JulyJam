@@ -45,8 +45,17 @@ public class _patternConeFire : MonoBehaviour {
                         if (bScript != null)
                         {
                             bScript.setSpeed(bulletSpeed);
-                            bScript.setAngle((offsetAngle - (fireSpreadAngle / 2) + fireSpreadAngle / (bulletCount) * (i)));
+                            if (bulletCount < 2)
+                            {
+                                bScript.setAngle(offsetAngle);
+                            }
+                            else
+                            {
+                                bScript.setAngle((offsetAngle - fireSpreadAngle/2 + fireSpreadAngle/(bulletCount-1)*i));
+                            }
+                            
                         }
+
                         else
                         {
                             Debug.Log("Could not find bullet script");
