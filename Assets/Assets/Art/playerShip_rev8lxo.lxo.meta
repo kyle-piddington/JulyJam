@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: bf6ed1d41b1dbb546b24bc3139ae65be
 ModelImporter:
   serializedVersion: 15
@@ -140,6 +141,12 @@ ModelImporter:
     4300012: Back_Flaps
     4300014: Back_Thruster
     9500000: //RootNode
+=======
+guid: 6b9c8e0fd976023419d53d3e1a9ba195
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName: {}
+>>>>>>> 715cea1c4d1812002eb4c5e03716dc654f048fe5
   materials:
     importMaterials: 1
     materialName: 0

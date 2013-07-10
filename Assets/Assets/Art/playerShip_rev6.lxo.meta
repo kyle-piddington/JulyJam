@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5bea7b81451989140bb0424f82dbc952
 ModelImporter:
   serializedVersion: 15
@@ -125,6 +126,12 @@ ModelImporter:
     4300006: Body2
     4300008: Mesh
     9500000: //RootNode
+=======
+guid: 09363296cc0a12448bfb65104591bf3c
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName: {}
+>>>>>>> 715cea1c4d1812002eb4c5e03716dc654f048fe5
   materials:
     importMaterials: 1
     materialName: 0
