@@ -10,8 +10,6 @@ public class ScreenBounds{
 
     public static bool Contains(Vector2 point)
     {
-        Rect r = new Rect(x, z, width, height);
-       
-        return r.Contains(point);
+        return (point.x > x && point.y < z && point.x < x + width && point.y > z - height);
     }
 }
