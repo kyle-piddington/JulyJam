@@ -5,7 +5,7 @@ using System.Collections;
 public class shipRotation : MonoBehaviour
 {
 
-    private Vector3 rotDir = new Vector3(0, 0, 0);
+
     private KeyCode rgt = KeyCode.D;
     private KeyCode lft = KeyCode.A;
     private KeyCode shift = KeyCode.LeftShift;
