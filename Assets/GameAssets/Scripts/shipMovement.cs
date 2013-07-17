@@ -24,10 +24,7 @@ public class shipMovement : MonoBehaviour
     
         
     void Update()
-    {
-       
-        
-        
+    { 
         movDir.Set(0, 0, 0);
     
         if (Input.GetKey(frwd)) {
@@ -116,9 +113,18 @@ public class shipMovement : MonoBehaviour
         }
         if (Input.GetKey(shift) && rollAngle == 0)
         {
-            rollAngle = +(360);
-
+			if(gameObject.GetComponent<playerProperties>().dodgeMeter>0)
+			{
+	            rollAngle = +(360);
+				gameObject.GetComponent<playerProperties>().allowCollisions = false;
+				gameObject.GetComponent<playerProperties>().dodgeMeter-=10*Time.deltaTime;
+			}
         }
+		if(!Input.GetKey (shift) && rollAngle == 0)
+		{
+			gameObject.GetComponent<playerProperties>().allowCollisions = true;
+		}
+		
         transform.Translate((movDir.normalized) * speed*Time.deltaTime,Space.World);
    
     }

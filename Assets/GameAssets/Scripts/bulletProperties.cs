@@ -3,7 +3,7 @@ using System.Collections;
 
 public class bulletProperties : MonoBehaviour {
 	
-	public int damage;
+	public float damage;
 	public float lifespan;
 	// Use this for initialization
 	void Start () {
@@ -11,9 +11,11 @@ public class bulletProperties : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		lifespan-=Time.deltaTime;
 		
-		if(lifespan-Time.deltaTime<0)
+		if(lifespan<0)
 		{
 			Destroy (gameObject);
 		}
