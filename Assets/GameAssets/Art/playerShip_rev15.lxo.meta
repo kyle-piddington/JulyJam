@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: e1c39c94ae26f754eaffc6b04206b595
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Back_Flaps
+    100002: Back_Thruster
+    100004: Body
+    100006: Body2
+    100008: BodyPainted
+    100010: Cockpit
+    100012: Color_grid__Image___Texture_
+    100014: Integrated_Mesh
+    100016: playerShip_diffuse__Image___Texture_
+    100018: //RootNode
+    100020: Render
+    100022: SidePainted
+    100024: Sides
+    100026: Texture_Group
+    100028: ThrusterPainted
+    100030: Vent_Flap
+    100032: Wing
+    100034: WingPainted
+    400000: Back_Flaps
+    400002: Back_Thruster
+    400004: Body
+    400006: Body2
+    400008: BodyPainted
+    400010: Cockpit
+    400012: Color_grid__Image___Texture_
+    400014: Integrated_Mesh
+    400016: playerShip_diffuse__Image___Texture_
+    400018: //RootNode
+    400020: Render
+    400022: SidePainted
+    400024: Sides
+    400026: Texture_Group
+    400028: ThrusterPainted
+    400030: Vent_Flap
+    400032: Wing
+    400034: WingPainted
+    2300000: Back_Flaps
+    2300002: Back_Thruster
+    2300004: Body
+    2300006: Body2
+    2300008: BodyPainted
+    2300010: Cockpit
+    2300012: Integrated_Mesh
+    2300014: SidePainted
+    2300016: Sides
+    2300018: ThrusterPainted
+    2300020: Vent_Flap
+    2300022: Wing
+    2300024: WingPainted
+    3300000: Back_Flaps
+    3300002: Back_Thruster
+    3300004: Body
+    3300006: Body2
+    3300008: BodyPainted
+    3300010: Cockpit
+    3300012: Integrated_Mesh
+    3300014: SidePainted
+    3300016: Sides
+    3300018: ThrusterPainted
+    3300020: Vent_Flap
+    3300022: Wing
+    3300024: WingPainted
+    4300000: Body
+    4300002: Wing
+    4300004: Vent_Flap
+    4300006: Body2
+    4300008: Cockpit
+    4300010: Sides
+    4300012: Back_Flaps
+    4300014: Back_Thruster
+    4300016: Integrated_Mesh
+    4300018: WingPainted
+    4300020: ThrusterPainted
+    4300022: BodyPainted
+    4300024: SidePainted
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

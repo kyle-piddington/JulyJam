@@ -99,8 +99,9 @@ public class Main : MonoBehaviour
             switch (number)
             {
                 case 1:
-					//Application.LoadLevel ( level1 name here);
-                    break;
+					CameraFade.StartAlphaFade (Color.white, false, 1, 0, () => { Application.LoadLevel ("level1");});
+					//Application.LoadLevel ("level1");
+				    break;
                 case 2:
 					levelselectcam = true;
                     break;
@@ -108,7 +109,8 @@ public class Main : MonoBehaviour
                     Application.Quit();
                     break;
                 case 4:
-                	//Application.LoadLevel (level1);
+					CameraFade.StartAlphaFade (Color.white, false, 1, 0, () => { Application.LoadLevel ("level1");});
+                	//Application.LoadLevel ("level1");
                 	break;
                 case 5:
                 	//Application.LoadLevel (level2);
