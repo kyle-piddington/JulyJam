@@ -19,5 +19,6 @@ public class _enemyMoveDownStop : MonoBehaviour {
         {
             transform.Translate(Vector3.forward * Mathf.Log(1 + (transform.position.z-targY)) * startSpeed*Time.deltaTime,Space.Self);
         }
+        //Time.e
 	}
 }

@@ -71,9 +71,11 @@ public class _patternConeFire : MonoBehaviour {
         else if (resetTime > 0 && resets)
         {
             resetTimer += Time.deltaTime;
+            Debug.Log("resetting:" + resetTime + "/" + resetTimer);
         }
-        else if (resetTimer > resetTime && resets)
+        if (resetTimer > resetTime && resets)
         {
+          
             resetTimer = 0;
             refireTimer = 0;
             totalTimer = 0;

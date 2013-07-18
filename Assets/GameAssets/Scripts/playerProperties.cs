@@ -61,7 +61,7 @@ public class playerProperties : MonoBehaviour {
 		// we need to make player a prefab so that we can have multiple lives
 		if(health<=0)
 		{
-			Destroy(gameObject);
+			
 			/*if(lives>0)
 			{
 				CREATE NEW PLAYER PREFAB
