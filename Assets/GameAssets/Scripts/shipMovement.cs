@@ -113,24 +113,33 @@ public class shipMovement : MonoBehaviour
         }
         if (Input.GetKey(shift) && rollAngle == 0)
         {
-			if(gameObject.GetComponent<playerProperties>().dodgeMeter>0)
+			if(gameObject.GetComponent<playerProperties>().dodgeMeter>0 && gameObject.GetComponent<playerProperties>().allowDodge)
 			{
-	            rollAngle = +(360);
-				gameObject.GetComponent<playerProperties>().allowCollisions = false;
+	            dodge ();
 				gameObject.GetComponent<playerProperties>().dodgeMeter-=10*Time.deltaTime;
 			}
         }
-		if(!Input.GetKey (shift) && rollAngle == 0)
+		
+		
+		if(!Input.GetKey (shift) && rollAngle == 0 && !gameObject.GetComponent<playerProperties>().dead)
 		{
 			gameObject.GetComponent<playerProperties>().allowCollisions = true;
+		}
+		
+		if(gameObject.GetComponent<playerProperties>().dead)
+		{
+			dodge ();
 		}
 		
         transform.Translate((movDir.normalized) * speed*Time.deltaTime,Space.World);
    
     }
 
-    
-
+    void dodge()
+	{
+		if(rollAngle == 0) rollAngle = +(360);
+		gameObject.GetComponent<playerProperties>().allowCollisions = false;
+	}
   
 
   
