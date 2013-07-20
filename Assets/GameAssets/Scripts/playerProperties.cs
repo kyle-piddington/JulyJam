@@ -20,11 +20,14 @@ public class playerProperties : MonoBehaviour {
 	//temp variable to store bullet damage
 	private float damageTaken;
 	
+	private Renderer renderer;
+	
 	// Use this for initialization
 	void Start () 
 	{
 		allowCollisions = true;
 		standbyTime = 0;
+		renderer = GetComponentInChildren<Renderer>(); //finds the appropriate renderer in the playerShip gameObject group
 	}
 	
 	void OnTriggerEnter(Collider other)
