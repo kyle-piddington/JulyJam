@@ -98,6 +98,11 @@ public class playerProperties : MonoBehaviour {
 				Debug.Log("GAME OVER MOTHER FUCKER");
 			}
 		}
+		
+		if(dodgeMeter<1 && allowCollisions)
+		{
+			dodgeMeter+=0.001f;
+		}
 	}
 	
 	void onHit(float damage)

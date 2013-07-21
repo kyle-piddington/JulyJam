@@ -116,7 +116,7 @@ public class shipMovement : MonoBehaviour
 			if(gameObject.GetComponent<playerProperties>().dodgeMeter>0 && gameObject.GetComponent<playerProperties>().allowDodge)
 			{
 	            dodge ();
-				gameObject.GetComponent<playerProperties>().dodgeMeter-=10*Time.deltaTime;
+				gameObject.GetComponent<playerProperties>().dodgeMeter-=0.25f;
 			}
         }
 		
