@@ -72,12 +72,12 @@ public class playerProperties : MonoBehaviour {
 
 				standbyTime+=Time.deltaTime;
 				
-				//if(health<1) health+=0.003f;
+				if(health<1) health+=0.0035f;
 				
 				if(standbyTime>2.9 && standbyTime<3.1)
 				{
 					transform.position = startPos;
-					health = 1;
+					//health = 1;
 				}
 				
 				if(standbyTime>3) renderer.enabled = true;
@@ -87,6 +87,7 @@ public class playerProperties : MonoBehaviour {
 					dead = false;
 					allowDodge = true;
 					standbyTime = 0;
+					health = 1;
 					lives--;
 					renderer.enabled = true;
 				}
