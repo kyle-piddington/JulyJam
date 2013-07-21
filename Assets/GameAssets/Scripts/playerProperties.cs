@@ -5,6 +5,7 @@ public class playerProperties : MonoBehaviour {
 	
 	public float health;
 	public int lives;
+	public bool dead;
 	
 	public Vector3 startPos = new Vector3(0.3450498f,-1f,-16.43601f);
 	
@@ -14,17 +15,25 @@ public class playerProperties : MonoBehaviour {
 	//varaible to determine whether you can take damage or not
 	public bool allowCollisions;
 	
+	//prevents dodging while dead;
+	public bool allowDodge;
+	
 	//variable to make sure you're dead for a certain amount of time
 	private float standbyTime;
 	
 	//temp variable to store bullet damage
 	private float damageTaken;
 	
+	private Renderer renderer;
+	
 	// Use this for initialization
 	void Start () 
 	{
 		allowCollisions = true;
+		allowDodge = true;
 		standbyTime = 0;
+		renderer = GetComponentInChildren<Renderer>(); //finds the appropriate renderer in the playerShip gameObject group
+		dead = false;
 	}
 	
 	void OnTriggerEnter(Collider other)
@@ -50,25 +59,37 @@ public class playerProperties : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(health<=0)
+		if(health<=0) dead = true;
+		
+		if(dead)
 		{
 			renderer.enabled = false;
-			allowCollisions = false;
+			allowDodge = false;
 			
 			if(lives>0)
 			{
 				Debug.Log ("dead");
-				
+
 				standbyTime+=Time.deltaTime;
 				
-				if(standbyTime>3)
+				if(health<1) health+=0.0035f;
+				
+				if(standbyTime>2.9 && standbyTime<3.1)
 				{
-					renderer.enabled = true;
-					lives--;
-					health = 1;
-					standbyTime = 0;
-					allowCollisions = true;
 					transform.position = startPos;
+					//health = 1;
+				}
+				
+				if(standbyTime>3) renderer.enabled = true;
+				
+				if(standbyTime>5)
+				{
+					dead = false;
+					allowDodge = true;
+					standbyTime = 0;
+					health = 1;
+					lives--;
+					renderer.enabled = true;
 				}
 			}
 			
@@ -76,6 +97,11 @@ public class playerProperties : MonoBehaviour {
 			{
 				Debug.Log("GAME OVER MOTHER FUCKER");
 			}
+		}
+		
+		if(dodgeMeter<1 && allowCollisions)
+		{
+			dodgeMeter+=0.001f;
 		}
 	}
 	
