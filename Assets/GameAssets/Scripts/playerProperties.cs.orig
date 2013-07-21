@@ -1,0 +1,91 @@
+using UnityEngine;
+using System.Collections;
+
+public class playerProperties : MonoBehaviour {
+	
+	public float health;
+	public int lives;
+	
+	public Vector3 startPos = new Vector3(0.3450498f,-1f,-16.43601f);
+	
+	//variable to determine
+	public float dodgeMeter;
+	
+	//varaible to determine whether you can take damage or not
+	public bool allowCollisions;
+	
+	//variable to make sure you're dead for a certain amount of time
+	private float standbyTime;
+	
+	//temp variable to store bullet damage
+	private float damageTaken;
+	
+	// Use this for initialization
+	void Start () 
+	{
+		allowCollisions = true;
+		standbyTime = 0;
+	}
+	
+	void OnTriggerEnter(Collider other)
+	{
+		if(allowCollisions)
+		{
+			//check if the collision object has bulletProperties
+			if(other.GetComponent<bulletProperties>()!=null)
+			{
+				//ask bullet how much damage it deals and then deal damage
+				damageTaken = other.GetComponent<bulletProperties>().damage;
+				onHit(damageTaken);
+				
+				//destroy the bullet when it hits
+				Destroy (other.transform.root.gameObject);
+				
+				//need to spawn and explosion when bullet hits. 
+				//that would be baller
+			}
+		}
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+		if(health<=0)
+		{
+<<<<<<< HEAD
+			
+			/*if(lives>0)
+=======
+			renderer.enabled = false;
+			allowCollisions = false;
+			
+			if(lives>0)
+>>>>>>> b509d0448ec1c1197a8644b6a04fd74daec0ee55
+			{
+				Debug.Log ("dead");
+				
+				standbyTime+=Time.deltaTime;
+				
+				if(standbyTime>3)
+				{
+					renderer.enabled = true;
+					lives--;
+					health = 1;
+					standbyTime = 0;
+					allowCollisions = true;
+					transform.position = startPos;
+				}
+			}
+			
+			else
+			{
+				Debug.Log("GAME OVER MOTHER FUCKER");
+			}
+		}
+	}
+	
+	void onHit(float damage)
+	{
+		health-=damage;
+	}	
+}
