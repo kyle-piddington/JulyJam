@@ -1,25 +1,26 @@
 fileFormatVersion: 2
-guid: 4b4bad5f66bf4f34c998f310c9e17647
+guid: 67cf39d88461f91468343d80534ee575
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: Camera
-    100002: Directional_Light
-    100004: Integrated_Mesh
-    100006: playerShip_diffuse_final__Image___Texture_
+    100002: Cube
+    100004: Cylinder
+    100006: Directional_Light
     100008: //RootNode
     100010: Render
-    100012: Texture_Group
     400000: Camera
-    400002: Directional_Light
-    400004: Integrated_Mesh
-    400006: playerShip_diffuse_final__Image___Texture_
+    400002: Cube
+    400004: Cylinder
+    400006: Directional_Light
     400008: //RootNode
     400010: Render
-    400012: Texture_Group
-    2300000: Integrated_Mesh
-    3300000: Integrated_Mesh
-    4300000: Integrated_Mesh
+    2300000: Cube
+    2300002: Cylinder
+    3300000: Cube
+    3300002: Cylinder
+    4300000: Cube
+    4300002: Cylinder
     9500000: //RootNode
   materials:
     importMaterials: 1

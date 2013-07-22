@@ -1,25 +1,21 @@
 fileFormatVersion: 2
-guid: 4b4bad5f66bf4f34c998f310c9e17647
+guid: c716cd560a59e074c91f383ccb7de59b
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: Camera
-    100002: Directional_Light
-    100004: Integrated_Mesh
-    100006: playerShip_diffuse_final__Image___Texture_
-    100008: //RootNode
-    100010: Render
-    100012: Texture_Group
+    100002: Directional Light
+    100004: Integrated Mesh
+    100006: //RootNode
+    100008: Texture Group
     400000: Camera
-    400002: Directional_Light
-    400004: Integrated_Mesh
-    400006: playerShip_diffuse_final__Image___Texture_
-    400008: //RootNode
-    400010: Render
-    400012: Texture_Group
-    2300000: Integrated_Mesh
-    3300000: Integrated_Mesh
-    4300000: Integrated_Mesh
+    400002: Directional Light
+    400004: Integrated Mesh
+    400006: //RootNode
+    400008: Texture Group
+    2300000: Integrated Mesh
+    3300000: Integrated Mesh
+    4300000: Integrated Mesh
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -37,7 +33,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
