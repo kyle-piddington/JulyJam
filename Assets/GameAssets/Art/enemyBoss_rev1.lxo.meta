@@ -1,27 +1,8 @@
 fileFormatVersion: 2
-guid: 67cf39d88461f91468343d80534ee575
+guid: 8579f1cc1cd09434ea49f28414f3159f
 ModelImporter:
   serializedVersion: 15
-  fileIDToRecycleName:
-    100000: Camera
-    100002: Cube
-    100004: Cylinder
-    100006: Directional_Light
-    100008: //RootNode
-    100010: Render
-    400000: Camera
-    400002: Cube
-    400004: Cylinder
-    400006: Directional_Light
-    400008: //RootNode
-    400010: Render
-    2300000: Cube
-    2300002: Cylinder
-    3300000: Cube
-    3300002: Cylinder
-    4300000: Cube
-    4300002: Cylinder
-    9500000: //RootNode
+  fileIDToRecycleName: {}
   materials:
     importMaterials: 1
     materialName: 0
